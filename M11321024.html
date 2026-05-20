@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抓到你了，AI 發明家！—— 一窺生成式 AI 的「專利超進化」秘史</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f4ff',
+                            100: '#e0e9fe',
+                            200: '#c1d3fe',
+                            300: '#92b3fd',
+                            400: '#5c8afb',
+                            500: '#3761f4',
+                            600: '#2543e8',
+                            700: '#1d32d4',
+                            800: '#1e2aad',
+                            900: '#1e2989',
+                            950: '#161a53',
+                        },
+                        accent: '#ff3d00',
+                        glass: 'rgba(255, 255, 255, 0.03)',
+                        darkBg: '#0a0c10',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0c10;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #92b3fd 0%, #3761f4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1;
+            opacity: 0.1;
+            position: absolute;
+            top: -1rem;
+            left: -1rem;
+            z-index: 0;
+        }
+        .glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(55, 97, 244, 0.15) 0%, rgba(55, 97, 244, 0) 70%);
+            filter: blur(40px);
+            z-index: -1;
+            pointer-events: none;
+        }
+        .prose-custom p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
+        .prose-custom strong {
+            color: #fff;
+            font-weight: 600;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 z-50 bg-white/5">
+        <div id="progress-bar" class="h-full bg-brand-500 w-0 transition-all duration-150"></div>
+    </div>
+
+    <!-- Header / Hero Section -->
+    <header class="relative min-h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden">
+        <div class="glow top-20 left-10"></div>
+        <div class="glow bottom-20 right-10"></div>
+        
+        <div class="max-w-5xl w-full z-10 space-y-8">
+            <div class="flex flex-wrap gap-3 mb-6">
+                <span class="px-4 py-1 text-xs font-bold tracking-widest uppercase bg-brand-600/20 text-brand-400 border border-brand-500/30 rounded-full">GenAI Insight</span>
+                <span class="px-4 py-1 text-xs font-bold tracking-widest uppercase bg-accent/10 text-accent border border-accent/30 rounded-full">Patent War</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black font-display leading-[1.1] tracking-tight text-white">
+                抓到你了，<br/>
+                <span class="gradient-text">AI 發明家！</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-slate-400 max-w-2xl font-light leading-relaxed">
+                撥開科技業神祕的紗簾，一窺生成式 AI 背後那場看不見煙硝的「專利超進化」秘史。
+            </p>
+
+            <!-- Banner Image -->
+            <div class="relative w-full aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl shadow-brand-500/20 border border-white/10 group mt-12">
+                <img src='https://opal.google/board/blobs/80be94cc-e7d5-44b5-88d1-f7e9829232d3' alt='AI Patent Banner' class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent opacity-60"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-24 space-y-32">
+        
+        <!-- Intro -->
+        <section class="relative">
+            <div class="prose-custom text-lg md:text-xl">
+                <p>
+                    在這個連鄰居家的貓可能都聽過 ChatGPT 的時代，我們習慣了 AI 會寫詩、會畫畫、還能幫你寫程式碼。但你有沒有想過，當這台「數位大腦」吐出一個前所未見的新設計或新演算法時，這份智慧結晶到底屬於誰？
+                </p>
+                <p>
+                    今天，我們要撥開科技業神祕的紗簾，看看生成式 AI（GenAI）背後那場看不見煙硝的「專利戰爭」。
+                </p>
+            </div>
+        </section>
+
+        <!-- 1. AI 也有「身分證」？ -->
+        <section class="relative group">
+            <span class="section-number">01</span>
+            <div class="relative z-10 space-y-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-white flex items-center gap-4">
+                    AI 也有「身分證」？
+                    <span class="h-px flex-1 bg-gradient-to-r from-brand-500/50 to-transparent"></span>
+                </h2>
+                <p class="text-slate-400 text-lg">如果把生成式 AI 比喻成一個會變魔術的天才，那「專利」就是他隨身攜帶的那本祕笈。</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-card p-8 hover:bg-white/5 transition-all group/card">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/20 flex items-center justify-center mb-6 text-brand-400 group-hover/card:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">大腦結構</h3>
+                        <p class="text-sm text-slate-400">就像是設計出一種全新的神經元連接方式，比如讓 AI 更有「注意力」的機制。</p>
+                    </div>
+                    <div class="glass-card p-8 hover:bg-white/5 transition-all group/card">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/20 flex items-center justify-center mb-6 text-brand-400 group-hover/card:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">修煉秘技</h3>
+                        <p class="text-sm text-slate-400">如何餵它吃數據、透過人類反饋來校正（RLHF），這些過程都是專利的攻防戰場。</p>
+                    </div>
+                    <div class="glass-card p-8 hover:bg-white/5 transition-all group/card">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/20 flex items-center justify-center mb-6 text-brand-400 group-hover/card:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">煉金術</h3>
+                        <p class="text-sm text-slate-400">將雜亂的網路廢料變成點石成金的訓練數據，背後的清洗與合成技術是核心資產。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 時光機 -->
+        <section class="relative group">
+            <span class="section-number">02</span>
+            <div class="relative z-10 space-y-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white flex items-center gap-4">
+                    時光機：成名之路
+                    <span class="h-px flex-1 bg-gradient-to-r from-brand-500/50 to-transparent"></span>
+                </h2>
+                
+                <div class="space-y-12 border-l-2 border-white/10 ml-4 pl-8 md:pl-12">
+                    <div class="relative">
+                        <div class="absolute -left-[45px] md:-left-[61px] top-2 w-6 h-6 rounded-full bg-brand-500 border-4 border-darkBg"></div>
+                        <h4 class="text-brand-400 font-display font-bold text-lg mb-2">萌芽期（2014 以前）</h4>
+                        <p class="text-slate-400">那是 IBM 和微軟等「老派大哥」把持的年代。專利大多集中在基礎的神經網路和簡單的機率模型。</p>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -left-[45px] md:-left-[61px] top-2 w-6 h-6 rounded-full bg-brand-400 border-4 border-darkBg"></div>
+                        <h4 class="text-brand-300 font-display font-bold text-lg mb-2">關鍵突破期（2014 - 2019）</h4>
+                        <p class="text-slate-400">人類智慧史上的兩次大地震：2014 年 **GANs** 誕生；2017 年 Google 發表 **Transformer** 架構，引發了專利佈局的重心大轉移。</p>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -left-[45px] md:-left-[61px] top-2 w-6 h-6 rounded-full bg-accent border-4 border-darkBg animate-pulse"></div>
+                        <h4 class="text-accent font-display font-bold text-lg mb-2">大爆發時期（2020 至今）</h4>
+                        <p class="text-slate-400">ChatGPT 問世後，GenAI 相關專利在過去 10 年內暴漲了 8 倍！每個人都急著幫自己的 AI 申請「身分證」。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 大國博弈 -->
+        <section class="relative group">
+            <span class="section-number">03</span>
+            <div class="relative z-10 space-y-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-white flex items-center gap-4">
+                    大國博弈：誰是 AI 霸主？
+                    <span class="h-px flex-1 bg-gradient-to-r from-brand-500/50 to-transparent"></span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="glass-card overflow-hidden group/item">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-white mb-4 flex items-center justify-between">
+                                數量王「中國」
+                                <span class="text-brand-500 text-sm font-normal uppercase tracking-tighter">Volume King</span>
+                            </h3>
+                            <p class="text-slate-400 leading-relaxed">
+                                佔據全球約 70% 的申請量。騰訊、百度、平安保險等企業將 AI 應用在智慧家電與城市，展現了極強的商業落地能力。
+                            </p>
+                        </div>
+                        <div class="h-2 w-full bg-brand-500/20">
+                            <div class="h-full bg-brand-500 w-[70%]"></div>
+                        </div>
+                    </div>
+                    <div class="glass-card overflow-hidden group/item">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-white mb-4 flex items-center justify-between">
+                                技術實力派「美國」
+                                <span class="text-accent text-sm font-normal uppercase tracking-tighter">Quality Hub</span>
+                            </h3>
+                            <p class="text-slate-400 leading-relaxed">
+                                走高品質路線。NVIDIA 壟斷晶片架構，Google 與 Microsoft 領先演算法。專利「被引用率」極高。
+                            </p>
+                        </div>
+                        <div class="h-2 w-full bg-accent/20">
+                            <div class="h-full bg-accent w-[40%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 真心話大冒險 -->
+        <section class="relative group">
+            <span class="section-number">04</span>
+            <div class="relative z-10 space-y-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-white flex items-center gap-4">
+                    AI 專利的那些「尷尬事」
+                    <span class="h-px flex-1 bg-gradient-to-r from-brand-500/50 to-transparent"></span>
+                </h2>
+                
+                <div class="space-y-6">
+                    <div class="p-6 rounded-2xl bg-white/5 border-l-4 border-brand-500">
+                        <h4 class="text-white font-bold mb-2">發明人可以是機器人嗎？</h4>
+                        <p class="text-slate-400 text-sm">目前的司法共識冷酷地說了聲「不」——沒有靈魂的自然人，目前還沒資格當發明家。</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white/5 border-l-4 border-brand-400">
+                        <h4 class="text-white font-bold mb-2">數據來源的「原罪」</h4>
+                        <p class="text-slate-400 text-sm">如果讀了有版權的作品才學會寫詩，其產生的專利是否具備合法性？這是一場史詩級大亂鬥。</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white/5 border-l-4 border-brand-300">
+                        <h4 class="text-white font-bold mb-2">專利叢林危機</h4>
+                        <p class="text-slate-400 text-sm">科技巨頭在必經節點插滿旗幟，對小創業者來說，意味著還沒開始就可能踏進別人的領地。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 展望 -->
+        <section class="relative group">
+            <span class="section-number">05</span>
+            <div class="relative z-10 space-y-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-white flex items-center gap-4">
+                    未來的 AI 專利長什麼樣？
+                    <span class="h-px flex-1 bg-gradient-to-r from-brand-500/50 to-transparent"></span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-1 rounded-[2rem] bg-gradient-to-br from-brand-400/20 to-transparent">
+                        <div class="bg-darkBg rounded-[1.9rem] p-8 h-full">
+                            <span class="text-xs text-brand-400 font-bold tracking-widest uppercase">Trend 01</span>
+                            <h4 class="text-xl font-bold text-white mt-2 mb-4">從「大」變「省」</h4>
+                            <p class="text-slate-400 text-sm">「綠色 AI」（低能耗訓練）與「邊緣運算 AI」將成為專利新寵。</p>
+                        </div>
+                    </div>
+                    <div class="p-1 rounded-[2rem] bg-gradient-to-br from-brand-400/20 to-transparent">
+                        <div class="bg-darkBg rounded-[1.9rem] p-8 h-full">
+                            <span class="text-xs text-brand-400 font-bold tracking-widest uppercase">Trend 02</span>
+                            <h4 class="text-xl font-bold text-white mt-2 mb-4">安全才是王道</h4>
+                            <p class="text-slate-400 text-sm">如何防止 AI 產生偏見？如何識別生成假臉？這些防護技術將成為重中之重。</p>
+                        </div>
+                    </div>
+                    <div class="p-1 rounded-[2rem] bg-gradient-to-br from-brand-400/20 to-transparent md:col-span-2">
+                        <div class="bg-darkBg rounded-[1.9rem] p-8 h-full">
+                            <span class="text-xs text-brand-400 font-bold tracking-widest uppercase">Final Core</span>
+                            <h4 class="text-xl font-bold text-white mt-2 mb-4">品質勝過一切</h4>
+                            <p class="text-slate-400 text-sm">僅僅微調參數的時代已過去，只有具備真正工業價值的基礎演算法改良，才能立於不敗之地。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 結語 -->
+        <section class="relative pt-20">
+            <div class="glass-card p-12 text-center space-y-8 overflow-hidden relative">
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+                
+                <h2 class="text-3xl font-bold text-white">專利不只是法律紙張</h2>
+                <div class="prose-custom max-w-2xl mx-auto">
+                    <p>
+                        翻開生成式 AI 的專利演進史，我們看到的其實不只是法律條文，而是一張「人類智慧進階」的紀錄表。專利不僅保護了發明人的權益，更像是為人類探索未知的過程留下了一道道座標。
+                    </p>
+                    <p class="text-brand-300 italic">
+                        「當科技跑得比法律快，專利或許就是那份讓我們在 AI 時代保持理性與秩序的契約。」
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating Action Button for Scroll Top -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 w-14 h-14 rounded-full bg-brand-500 text-white shadow-xl shadow-brand-500/20 flex items-center justify-center translate-y-24 opacity-0 transition-all duration-300 hover:scale-110 active:scale-95 z-40">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <script>
+        // Progress bar and Scroll to Top logic
+        const progressBar = document.getElementById('progress-bar');
+        const scrollTopBtn = document.getElementById('scroll-top');
+
+        window.addEventListener('scroll', () => {
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (window.pageYOffset / totalHeight) * 100;
+            progressBar.style.width = `${progress}%`;
+
+            if (window.pageYOffset > 500) {
+                scrollTopBtn.classList.remove('translate-y-24', 'opacity-0');
+            } else {
+                scrollTopBtn.classList.add('translate-y-24', 'opacity-0');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
