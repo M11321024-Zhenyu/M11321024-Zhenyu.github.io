@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張凌赫：從理工學霸到古裝天花板 - 主題報告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'regal-gold': '#C5A059',
+                        'deep-slate': '#0F172A',
+                        'mystic-blue': '#1E293B',
+                        'accent-red': '#EF4444',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'glow': 'glow 3s infinite ease-in-out',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        glow: {
+                            '0%, 100%': { opacity: '0.8', filter: 'brightness(1)' },
+                            '50%': { opacity: '1', filter: 'brightness(1.3)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020617;
+            color: #E2E8F0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .section-gradient {
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 1) 100%);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0F172A; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        
+        .bento-item:hover {
+            transform: scale(1.02);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero / Infographic Section -->
+    <header class="relative min-h-screen flex flex-col items-center justify-start pt-12 px-4 md:px-8">
+        <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-600 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-regal-gold rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="z-10 w-full max-w-6xl animate-fade-in-up">
+            <div class="text-center mb-12">
+                <span class="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest uppercase bg-indigo-500/20 text-indigo-300 rounded-full border border-indigo-500/30">
+                    Industry Spotlight: Rising Star
+                </span>
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-regal-gold">
+                    張凌赫 <span class="text-2xl font-light text-slate-400 block md:inline mt-2 md:mt-0">ZHANG LINGHE</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto">
+                    學霸跨界、溫潤如玉、權謀瘋批：95後演員演藝生涯深度解析
+                </p>
+            </div>
+
+            <!-- Main Infographic Container -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 glass-card">
+                <div class="w-full flex flex-col lg:flex-row">
+                    <!-- Media Element -->
+                    <div class="lg:w-2/3 relative overflow-hidden group">
+                        <img src='https://opal.google/board/blobs/6a51ad5a-3d82-470e-b7c8-39e3e32b4bb6' alt='Zhang Linghe Infographic' class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent lg:hidden"></div>
+                    </div>
+                    
+                    <!-- Sidebar Summary -->
+                    <div class="lg:w-1/3 p-8 flex flex-col justify-center bg-white/5">
+                        <h3 class="text-regal-gold font-bold text-xl mb-6 flex items-center">
+                            <span class="w-8 h-px bg-regal-gold mr-3"></span> 圖表摘要
+                        </h3>
+                        <ul class="space-y-6">
+                            <li class="flex items-start group">
+                                <span class="bg-indigo-500/20 text-indigo-400 w-8 h-8 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0 font-bold">1</span>
+                                <div>
+                                    <p class="font-bold text-white group-hover:text-indigo-300 transition-colors">學霸背景</p>
+                                    <p class="text-sm text-slate-400">南京師範大學電力工程系畢業，理性邏輯思維。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start group">
+                                <span class="bg-indigo-500/20 text-indigo-400 w-8 h-8 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0 font-bold">2</span>
+                                <div>
+                                    <p class="font-bold text-white group-hover:text-indigo-300 transition-colors">作品里程碑</p>
+                                    <p class="text-sm text-slate-400">《蒼蘭訣》長珩仙君成名，《寧安如夢》謝危奠定地位。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start group">
+                                <span class="bg-indigo-500/20 text-indigo-400 w-8 h-8 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0 font-bold">3</span>
+                                <div>
+                                    <p class="font-bold text-white group-hover:text-indigo-300 transition-colors">演藝轉型</p>
+                                    <p class="text-sm text-slate-400">從「深情男二」成功轉型為「複雜權謀」男主角。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start group">
+                                <span class="bg-indigo-500/20 text-indigo-400 w-8 h-8 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0 font-bold">4</span>
+                                <div>
+                                    <p class="font-bold text-white group-hover:text-indigo-300 transition-colors">未來展望</p>
+                                    <p class="text-sm text-slate-400">跨足時裝周品牌大使，穩步邁向95後領軍人物。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Short Video Storyboard Section (Middle) -->
+    <section class="py-24 bg-slate-900/50 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+            <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2 italic">Cinematic Storyboard</h2>
+                    <p class="text-slate-400">【視覺敘事：從圖紙到國際舞台】</p>
+                </div>
+                <div class="glass-card p-4 rounded-xl max-w-sm">
+                    <p class="text-xs font-semibold text-indigo-400 uppercase tracking-widest mb-2">Music Guide</p>
+                    <p class="text-xs text-slate-300 leading-relaxed italic">
+                        冷靜鋼琴獨奏 → 國風交響樂 (古箏與大提琴) → 現代電子節拍
+                    </p>
+                </div>
+            </div>
+
+            <!-- Storyboard Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Scene 1 -->
+                <div class="glass-card rounded-2xl p-6 bento-item group border-t-2 border-indigo-500/30">
+                    <div class="text-indigo-500 mb-4 font-mono text-sm">#01 跨界開端</div>
+                    <div class="aspect-video bg-slate-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="text-center p-4">
+                            <p class="text-xs text-slate-500 italic">視覺示意：工程圖紙與玉佩交錯</p>
+                            <div class="mt-2 text-indigo-400 opacity-50">⚡ FLASH LIGHT ⚡</div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">桌面堆疊工程圖紙，修長的手撥開圖紙拿起古典玉佩，畫面隨閃光燈切換。</p>
+                </div>
+
+                <!-- Scene 2 -->
+                <div class="glass-card rounded-2xl p-6 bento-item group border-t-2 border-regal-gold/30">
+                    <div class="text-regal-gold mb-4 font-mono text-sm">#02 溫潤初現</div>
+                    <div class="aspect-video bg-slate-800 rounded-lg mb-4 flex items-center justify-center">
+                        <div class="text-center p-4 italic text-xs text-slate-500">視覺示意：仙氣繚繞、玉冠古裝</div>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">仙氣繚繞的水榭，身著純白淺藍古裝，在落花中緩緩轉身，展現深情微笑。</p>
+                </div>
+
+                <!-- Scene 3 -->
+                <div class="glass-card rounded-2xl p-6 bento-item group border-t-2 border-accent-red/30">
+                    <div class="text-accent-red mb-4 font-mono text-sm">#03 極致反差</div>
+                    <div class="aspect-video bg-slate-800 rounded-lg mb-4 flex items-center justify-center">
+                        <div class="text-center p-4 italic text-xs text-slate-500">視覺示意：大雪、黑紅官服、眼神突變</div>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">花瓣化為漫天大雪，眼神從溫潤變為深沉瘋狂，決絕轉身充滿壓迫感。</p>
+                </div>
+
+                <!-- Scene 4 -->
+                <div class="glass-card rounded-2xl p-6 bento-item group border-t-2 border-white/20">
+                    <div class="text-white mb-4 font-mono text-sm">#04 權謀遊刃</div>
+                    <div class="aspect-video bg-slate-800 rounded-lg mb-4 flex items-center justify-center">
+                        <div class="text-center p-4 italic text-xs text-slate-500">視覺示意：金碧輝煌朝堂、首輔長袍</div>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">身穿紅袍在長廊漫步，從嚴肅瞬間切換為自信幽默的挑眉，多面性格。</p>
+                </div>
+
+                <!-- Scene 5 -->
+                <div class="glass-card rounded-2xl p-6 bento-item group border-t-2 border-blue-400/30">
+                    <div class="text-blue-400 mb-4 font-mono text-sm">#05 步入國際</div>
+                    <div class="aspect-video bg-slate-800 rounded-lg mb-4 flex items-center justify-center">
+                        <div class="text-center p-4 italic text-xs text-slate-500">視覺示意：現代西裝、米蘭街頭閃光燈</div>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">快節奏剪輯，現代西裝展現190cm頭身比，在時裝周紅毯從容自在。</p>
+                </div>
+
+                <!-- Scene 6 -->
+                <div class="glass-card rounded-2xl p-6 bento-item group border-t-2 border-indigo-600">
+                    <div class="text-indigo-400 mb-4 font-mono text-sm">#06 聚焦未來</div>
+                    <div class="aspect-video bg-black rounded-lg mb-4 flex items-center justify-center">
+                        <div class="w-12 h-12 bg-white/20 rounded-full blur-xl animate-pulse"></div>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">卸下所有角色偽裝，純黑高領毛衣在頂光下直視鏡頭，眼神堅定平靜。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Report Section (Bottom) -->
+    <main class="py-24 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-px flex-grow bg-slate-800"></div>
+                <h2 class="text-2xl font-bold text-indigo-400 uppercase tracking-widest">探索報告內文</h2>
+                <div class="h-px flex-grow bg-slate-800"></div>
+            </div>
+
+            <!-- Summary List -->
+            <div class="mb-20 grid grid-cols-1 gap-4">
+                <h3 class="text-xl font-bold text-white mb-6">條列式摘要</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center p-4 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-500/50 transition-all">
+                        <span class="text-indigo-400 mr-4">✦</span>
+                        <p class="text-slate-300"><strong class="text-white">學霸背景出身</strong>：畢業於南京師範大學電力工程系，具備理工男的邏輯思維。</p>
+                    </div>
+                    <div class="flex items-center p-4 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-500/50 transition-all">
+                        <span class="text-indigo-400 mr-4">✦</span>
+                        <p class="text-slate-300"><strong class="text-white">成名轉折點</strong>：2022年憑藉《蒼蘭訣》中「長珩仙君」爆紅，譽為「溫潤如玉」代表。</p>
+                    </div>
+                    <div class="flex items-center p-4 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-500/50 transition-all">
+                        <span class="text-indigo-400 mr-4">✦</span>
+                        <p class="text-slate-300"><strong class="text-white">高產代表作</strong>：接連推出《雲之羽》、《寧安如夢》及《度華年》鞏固地位。</p>
+                    </div>
+                    <div class="flex items-center p-4 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-500/50 transition-all">
+                        <span class="text-indigo-400 mr-4">✦</span>
+                        <p class="text-slate-300"><strong class="text-white">演藝風格演變</strong>：從深情男二轉型為能駕馭權謀、瘋批、純愛的多樣男主。</p>
+                    </div>
+                    <div class="flex items-center p-4 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-500/50 transition-all">
+                        <span class="text-indigo-400 mr-4">✦</span>
+                        <p class="text-slate-300"><strong class="text-white">近期發展動態</strong>：跨足國際時尚周，嘗試現代題材《櫻桃琥珀》。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Body -->
+            <article class="prose prose-invert max-w-none space-y-16 text-slate-300 leading-relaxed">
+                <section>
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                        <span class="text-regal-gold mr-3">I.</span> 基本背景與出道契機
+                    </h3>
+                    <p>
+                        張凌赫（Zhang Linghe）於1997年出生於江蘇省無錫市，大學就讀於<span class="text-white">南京師範大學</span>（Nanjing Normal University），主修<span class="text-white">電力工程</span>（Electrical Engineering）。由於其優異的理科學業表現，被粉絲稱為「學霸（Academic God）」。2019年，他因緣際會下接觸演藝圈，隨即簽約出道，並於2020年主演首部探案劇《少女大人》，正式進入大眾視野。
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                        <span class="text-regal-gold mr-3">II.</span> 演藝生涯亮點與代表作品
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="glass-card p-6 rounded-2xl">
+                            <h4 class="text-indigo-300 font-bold mb-3">《蒼蘭訣》</h4>
+                            <p class="text-sm">飾演「長珩仙君」，其清冷高貴的氣質與深情的形象深入人心，獲得極高國民度，被評選為「待爆帝」。</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <h4 class="text-indigo-300 font-bold mb-3">《雲之羽》</h4>
+                            <p class="text-sm">與虞書欣二搭，飾演「宮子羽」。展現精緻五官與獨特影像風格，詮釋角色內心的「破碎感」。</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <h4 class="text-indigo-300 font-bold mb-3">《寧安如夢》</h4>
+                            <p class="text-sm">飾演具備複雜心機、帶點「瘋批」特質的帝師謝危。熱度居高不下，證明其支撐大男主劇集的能力。</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <h4 class="text-indigo-300 font-bold mb-3">《度華年》</h4>
+                            <p class="text-sm">2024年與趙今麥合作，飾演重生首輔裴文宣。靈活切換幽默與老練演技，獲得高度評價。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                        <span class="text-regal-gold mr-3">III.</span> 表演風格與大眾評價
+                    </h3>
+                    <p>
+                        張凌赫的身高達<span class="text-white">190公分</span>，擁有極佳的頭身比，被譽為「顏值天花板」。在表演上，他擅長利用細微的眼神變化來詮釋角色的內心掙扎。大眾開始注意到他在<span class="text-white italic">台詞功底（Voice Acting）</span>與情緒張力上的進步，而不僅僅是外貌。
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                        <span class="text-regal-gold mr-3">IV.</span> 近期動態與未來展望
+                    </h3>
+                    <p>
+                        持續活躍於影視創作，待播劇包括《四海重明》及《櫻桃琥珀》。同時作為多個奢侈品牌大使，頻繁現身巴黎與米蘭時裝周，展現極高的商業價值。
+                    </p>
+                </section>
+
+                <!-- Conclusion -->
+                <div class="bg-indigo-900/20 border border-indigo-500/30 p-8 rounded-3xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 7.89543 10.9124 7 12.017 7H19.017C20.1216 7 21.017 7.89543 21.017 9V15C21.017 17.2091 19.2261 19 17.017 19H14.017V21H14.017ZM5.017 21L5.017 18C5.017 16.8954 5.91243 16 7.017 16H10.017C10.5693 16 11.017 15.5523 11.017 15V9C11.017 8.44772 10.5693 8 10.017 8H6.017C5.46472 8 5.017 8.44772 5.017 9V12C5.017 12.5523 4.56928 13 4.017 13H2.017C1.46472 13 1.017 12.5523 1.017 12V9C1.017 7.89543 1.91243 7 3.017 7H10.017C11.1216 7 12.017 7.89543 12.017 9V15C12.017 17.2091 10.2261 19 8.017 19H5.017V21H5.017Z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">簡要結論</h3>
+                    <p class="text-slate-300 leading-relaxed italic">
+                        張凌赫憑藉「高學歷、高顏值」迅速崛起，透過多樣化的角色完成演技淬鍊。他目前的發展路徑已從流量演員逐步向具備市場影響力的實力派邁進，是當前中國演藝圈最具潛力的95後男演員之一。
+                    </p>
+                </div>
+
+                <!-- References -->
+                <div class="mt-12 pt-8 border-t border-slate-800">
+                    <h4 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4">引用的文獻來源</h4>
+                    <ul class="text-xs text-slate-500 space-y-2 list-disc list-inside">
+                        <li>新浪娛樂（Sina Entertainment）：演藝生涯回顧與作品熱度分析。</li>
+                        <li>豆瓣電影（Douban Movie）：劇集用戶評分與角色評論。</li>
+                        <li>搜狐新聞（Sohu News）：張凌赫學霸背景與2024動態報導。</li>
+                        <li>百度百科（Baidu Baike）：個人經歷與獲獎記錄。</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Centered Footer Section -->
+    <footer class="py-12 border-t border-white/5 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-slate-400 text-lg mb-2">
+                【主題探索報告】by <span class="text-accent-red italic font-bold">NTUST</span>
+            </p>
+            <p class="text-slate-500 font-mono tracking-widest text-sm">
+                學號：M11819188
+            </p>
+            <div class="mt-8 flex justify-center gap-4">
+                <div class="w-1 h-1 rounded-full bg-indigo-500"></div>
+                <div class="w-1 h-1 rounded-full bg-indigo-500"></div>
+                <div class="w-1 h-1 rounded-full bg-indigo-500"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll reveal effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, article > section').forEach(section => {
+            section.style.opacity = '0';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
