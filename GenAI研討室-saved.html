@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 GenAI 智慧文獻研討室</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1a365d',
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            800: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .academic-text {
+            line-height: 1.6;
+        }
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-navy text-white p-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-tight flex items-center gap-2">
+                <span>🤖</span> GenAI 智慧文獻研討室
+            </h1>
+            <div class="bg-white/10 px-3 py-1 rounded-full text-xs font-medium text-gray-200">
+                🔄 由 n8n 每週自動更新
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto w-full p-4 md:p-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <!-- Sidebar: Literature -->
+        <aside class="md:col-span-1 space-y-6">
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h2 class="text-lg font-semibold mb-4 text-navy">文獻管理</h2>
+                
+                <!-- Drag & Drop Area -->
+                <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-navy transition-colors cursor-pointer group">
+                    <p class="text-sm text-gray-500 group-hover:text-navy">拖曳 PDF 至此或點擊上傳</p>
+                </div>
+
+                <!-- File List -->
+                <div class="mt-6">
+                    <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">已掛載文獻</h3>
+                    <ul class="space-y-2">
+                        <li class="bg-gray-50 p-3 rounded-lg border border-gray-100 flex items-center gap-3">
+                            <span class="text-blue-500">📄</span>
+                            <a href="https://opal.google/board/blobs/66df418f-1bcc-44e0-aabc-c9a174a28fbb" target="_blank" class="text-sm text-navy hover:underline truncate">
+                                Patent-based Brokerage Analysis (5G).pdf
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Panel: Research -->
+        <section class="md:col-span-3 space-y-6">
+            
+            <!-- Input Section -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <label for="User_Question" class="block text-sm font-medium mb-2">提問區</label>
+                <div class="flex gap-2">
+                    <input type="text" id="User_Question" placeholder="輸入研討問題..." value="摘要" 
+                        class="flex-1 p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent">
+                    <button class="bg-navy text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-900 transition-colors shadow-lg">
+                        送出提問
+                    </button>
+                </div>
+            </div>
+
+            <!-- Analysis Output -->
+            <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm academic-text">
+                <div class="flex items-center gap-2 mb-6 border-b pb-4">
+                    <span class="text-2xl">🧠</span>
+                    <h2 class="text-xl font-bold text-navy">Expert Analysis</h2>
+                </div>
+                
+                <div class="prose max-w-none text-gray-800 space-y-6">
+                    <h3 class="text-xl font-bold">摘要深度學術綜論：基於專利仲介分析之開放式創新模式與生成式AI及技術群聚之交融</h3>
+
+                    <p><strong>一、 文獻核心發現與主題薈萃</strong><br>
+                    本研究文獻旨在解決開放式創新（Open Innovation, OI）在量化監測與實證研究上長期面臨的資料蒐集與方法論匱乏之挑戰。作者以行動通訊技術（特別是向5G演進的過程）為實證對象，提出了一套「基於專利的仲介分析（Patent-based Brokerage Analysis）」方法框架。其核心發現與主題可歸納為以下三點：</p>
+                    
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>知識流動的具象化：</strong> 運用專利引證作為代理指標，構建動態技術引用網路。</li>
+                        <li><strong>仲介角色映射：</strong> 提取五種創新仲介（協調者、守門員、代表、顧問、聯絡人），對應不同的創新模式。</li>
+                        <li><strong>動態技術演進：</strong> 透過識別關鍵節點與居間中心性，為企業制定技術佈局提供實證基礎。</li>
+                    </ul>
+
+                    <p><strong>二、 現代生成式人工智慧（GenAI）概念之映射與演進</strong><br>
+                    將文獻中的網路拓樸與仲介概念延伸至當代生成式人工智慧領域，GenAI 已成為重塑創新機制的「超級仲介者（Meta-Broker）」：</p>
+                    
+                    <ol class="list-decimal pl-5 space-y-2">
+                        <li><strong>語義空間躍升：</strong> 利用 LLMs 與 GNNs 解析專利庫，實現從單純文字探勘到語義預測的典範轉移。</li>
+                        <li><strong>GenAI 作為「聯絡人」樞紐：</strong> GenAI 將異質領域知識（如生物學與演算法）進行轉譯對接，顯著降低跨域融合成本。</li>
+                        <li><strong>策略自動化：</strong> 未來技術探勘將具備「生成式」特性，能透過模擬不同企業的專利融合路徑，自動推薦併購或授權建議。</li>
+                    </ol>
+
+                    <p><strong>三、 技術群聚對產業生態的啟示</strong><br>
+                    若以技術群聚框架審視 AI 生態，現今產業呈現高度去中心化，企業需透過 GenAI 構建專屬「守門員」，篩選外部開源模型以維持競爭門檻；同時，傳統的 NPEs 正演化為「模型即服務（MaaS）」聚合者，掌握底層算力至終端應用的關鍵節點。</p>
+
+                    <p><strong>四、 結論</strong><br>
+                    綜合所述，企業與國家需提升利用 AI 工具洞察並佔據跨技術群聚「仲介樞紐」的能力。開放式創新已從被動合作，演變為透過 GenAI 主動設計與編排生態系統的戰略型活動。</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>
